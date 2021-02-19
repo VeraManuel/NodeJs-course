@@ -1,6 +1,6 @@
 # NodeJs-course
 
-# 01-hla_mundo
+# 01-hola_mundo
 
 - Hola mundo
 - Saludar
