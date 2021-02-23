@@ -44,10 +44,10 @@ const getSuledoById = (id, callback) => {
     callback(null, sueldo);
     return;
   }
-  callback(new Error("El empleado no tiene sueldo"));
+  callback(new Error("no tiene sueldo por ser pasante"));
 };
 
-const id = 2;
+const id = 3;
 
 getEmpleadoById(id, (error, empleado) => {
   if (error) {
@@ -56,9 +56,7 @@ getEmpleadoById(id, (error, empleado) => {
   }
   getSuledoById(id, (error, sueldo) => {
     if (error && empleado.id) {
-      console.log(
-        `El empleado: ${empleado.nombre} no tiene sueldo por ser pasante.`
-      );
+      console.log(`El empleado: ${empleado.nombre}, ${error.message}.`);
       return;
     }
 
