@@ -34,7 +34,7 @@ const getEmpleadoById = (id, callback) => {
   callback(new Error("El empleado no existe"));
 };
 
-// funcion que busque salario por id, consumir esa funcion y modificar el log del empleado y si el di no existe
+// funcion que busque salario por id, consumir esa funcion y modificar el log del empleado y si el id no existe
 // en los sueldo colocar que no gana sueldo o que es pasante
 
 const getSuledoById = (id, callback) => {
@@ -47,7 +47,7 @@ const getSuledoById = (id, callback) => {
   callback(new Error("El empleado no tiene sueldo"));
 };
 
-const id = 5;
+const id = 2;
 
 getEmpleadoById(id, (error, empleado) => {
   if (error) {
