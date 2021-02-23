@@ -16,11 +16,11 @@ const empleados = [
 const sueldos = [
   {
     id: 1,
-    sueldo: 1500,
+    monto: 1500,
   },
   {
     id: 2,
-    sueldo: 2000,
+    monto: 2000,
   },
 ];
 
@@ -34,15 +34,36 @@ const getEmpleadoById = (id, callback) => {
   callback(new Error("El empleado no existe"));
 };
 
-const id = 1;
+// funcion que busque salario por id, consumir esa funcion y modificar el log del empleado y si el di no existe
+// en los sueldo colocar que no gana sueldo o que es pasante
+
+const getSuledoById = (id, callback) => {
+  const sueldo = sueldos.find((s) => s.id == id);
+
+  if (sueldo) {
+    callback(null, sueldo);
+    return;
+  }
+  callback(new Error("El empleado no tiene sueldo"));
+};
+
+const id = 5;
 
 getEmpleadoById(id, (error, empleado) => {
   if (error) {
     console.log(error);
     return;
   }
-  console.log(`El empleado: ${empleado.nombre}...`);
-});
+  getSuledoById(id, (error, sueldo) => {
+    if (error && empleado.id) {
+      console.log(
+        `El empleado: ${empleado.nombre} no tiene sueldo por ser pasante.`
+      );
+      return;
+    }
 
-// funcion que busque salario por id, consumir esa funcion y modifical el log del empleado y si el di no existe
-// en los sueldo colocar que no gana sueldo
+    console.log(
+      `El empleado: ${empleado.nombre} y su sueldo es de ${sueldo.monto}`
+    );
+  });
+});
