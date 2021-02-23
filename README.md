@@ -13,4 +13,4 @@
 - flecha (funciones flechas)
 - destructuracion
 - callbacks (basico)
-- callbacks-hell (avanzado ... en proceso)
+- callbacks-hell (avanzado ... assignment resolved)
