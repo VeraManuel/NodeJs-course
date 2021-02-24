@@ -16,3 +16,7 @@
 - callbacks-hell (avanzado ... assignment resolved)
 - promesas
 - async - await
+
+# 03-bases
+
+- npm y package.json
