@@ -14,3 +14,5 @@
 - destructuracion
 - callbacks (basico)
 - callbacks-hell (avanzado ... assignment resolved)
+- promesas
+- async - await
