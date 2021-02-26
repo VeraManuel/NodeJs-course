@@ -10,5 +10,8 @@
     "node"
   ],
   "author": "Manuel Vera",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
