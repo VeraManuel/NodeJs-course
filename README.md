@@ -21,3 +21,5 @@
 
 - npm y package.json
 - nodemon
+- use modules FS from node to create files
+- install depencies
