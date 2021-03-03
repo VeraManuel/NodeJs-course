@@ -29,8 +29,9 @@
 
 Options:
 -b, --base Es la base de la tabla de multiplicar [number] [required]
--l, --limite Es el limite de la tabla de multiplicar
-[number] [default: 10]
+-l, --limite Es el limite de la tabla de multiplicar [number] [default: 10]
 -v, --visualizar Muestra la tabla en la consola [boolean] [default: false]
 --help Show help [boolean]
 --version Show version number [boolean]
+
+# 04-todoapp
