@@ -27,7 +27,6 @@
 - install depencies
 - use package Yargs and Colors
 
-.....
 Options:
 -b, --base Es la base de la tabla de multiplicar [number] [required]
 -l, --limite Es el limite de la tabla de multiplicar
