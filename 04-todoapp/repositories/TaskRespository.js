@@ -14,7 +14,9 @@ class TaskRepository {
   }
 
   getAllTask() {
-    return this._tasks;
+    return this._tasks.map((task) => {
+      return { title: task.title, done: task.done, finished: task.finished };
+    });
   }
 
   /**
@@ -30,7 +32,10 @@ class TaskRepository {
     saveData(this._tasks);
   }
 
-  deleteTask() {}
+  deleteTask(id) {
+    const newTask = this._tasks.filter(this._tasks.id !== id);
+    return newTask;
+  }
 
   completeTask() {}
 }

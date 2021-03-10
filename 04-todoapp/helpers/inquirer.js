@@ -21,6 +21,10 @@ const inquirerMenu = async () => {
           name: `${"2 -".blue} Get tasks`,
         },
         {
+          value: 3,
+          name: `${"3 -".blue} Delete task`,
+        },
+        {
           value: 0,
           name: `${"0 -".blue} Salir`,
         },

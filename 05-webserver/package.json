@@ -1,0 +1,20 @@
+{
+  "name": "05-webserver",
+  "version": "0.0.1",
+  "description": "Webserver",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon index",
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Manuel Vera",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
