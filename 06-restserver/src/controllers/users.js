@@ -87,7 +87,7 @@ const updatePartialUser = (req, res) => {
 const deleteUser = (req, res) => {
   const { id } = req.params;
   const result = {
-    message: `User with ${id} deleted`,
+    message: `User with id ${id} deleted`,
   };
   res.status(200).json(result);
 };
