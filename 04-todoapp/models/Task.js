@@ -1,17 +1,18 @@
 const { v4: uuidv4 } = require("uuid");
+const getTodayDate = require("../helpers/dateFormat");
 
 class Task {
-  id = null;
+  id = "";
   title = "";
   done = null;
   created = null;
   finished = null;
 
   constructor(title) {
-    this.id = uuidv4();
+    this.id = uuidv4(); //asigna el id al TODO
     this.title = title;
     this.done = false;
-    this.created = new Date();
+    this.created = getTodayDate();
   }
 }
 

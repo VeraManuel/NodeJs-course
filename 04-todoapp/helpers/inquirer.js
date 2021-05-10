@@ -2,9 +2,9 @@ const inquirer = require("inquirer");
 const colors = require("colors");
 
 const inquirerMenu = async () => {
-  console.log("==========================".blue);
-  console.log("Select an option!".white);
-  console.log("==========================".blue);
+  console.log("===============================".blue);
+  console.log("Select an option".white);
+  console.log("===============================".blue);
 
   const menu = [
     {
@@ -14,19 +14,23 @@ const inquirerMenu = async () => {
       choices: [
         {
           value: 1,
-          name: `${"1 -".blue} Create task`,
+          name: `${"1-".blue} Create Task`,
         },
         {
           value: 2,
-          name: `${"2 -".blue} Get tasks`,
+          name: `${"2-".blue} Get Tasks`,
         },
         {
           value: 3,
-          name: `${"3 -".blue} Delete task`,
+          name: `${"3-".blue} Complete Task`,
         },
         {
-          value: 0,
-          name: `${"0 -".blue} Salir`,
+          value: 4,
+          name: `${"4-".blue} Delete Task`,
+        },
+        {
+          value: "X",
+          name: `${"0-".blue} Exit`,
         },
       ],
     },
@@ -51,7 +55,27 @@ const inquirerInput = async (message) => {
   return description;
 };
 
+const inquirerSubMenu = async (choices, action) => {
+  console.log("===============================".blue);
+  console.log("Select a task".white);
+  console.log("===============================".blue);
+
+  const menu = [
+    {
+      type: "list",
+      name: "option",
+      message: `Select task to ${action}`,
+      choices,
+    },
+  ];
+
+  const { option } = await inquirer.prompt(menu);
+
+  return option;
+};
+
 module.exports = {
   inquirerMenu,
   inquirerInput,
+  inquirerSubMenu,
 };
